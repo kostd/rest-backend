@@ -1,0 +1,28 @@
+schema {
+    query: Query
+    mutation: Mutation
+}
+
+type Query{
+    menuCategories: [Category!]!
+}
+
+type Mutation{
+    # это просто заглушка, поэтому не важно, что она возвращает
+    createOrder: String!
+}
+
+type Category{
+    name: String!
+    imagePath: String
+    dishes: [Dish!]!
+}
+
+type Dish{
+    name: String!
+    imagePath: String
+    cost: Int!,
+    consist: String
+    weight: String!
+    desc: String,
+}
